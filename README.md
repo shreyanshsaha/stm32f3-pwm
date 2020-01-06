@@ -8,13 +8,13 @@ Using hardware timers in *Output Configuration* allowed us to have reliable sign
 
 We have written our code in *SPL (Standard Peripheral Library)*.
 
-Lets go over some segments of the code:
-
-<center>
+This is the required PWM Signal we need:
 
 ![image2](/assets/shot1.png)
 
-</center>
+### Lets go over some segments of the code:
+
+
 
 ```c
 // Configure Clock
@@ -65,13 +65,12 @@ TIM_SetCompare2(TIM4, downPulse);
 CCR1 and CCR2 are used for TIM4_CH1 for specifying counter compare values which describe when to toggle voltage values.
 
 Using the code we were able to generate the required pwm:
-<center>
 
 ![shot2](/assets/shot2.png)
 
-</center>
 ## Timing signals
-Below are the timing signals which is required. As you can see we turn _pwm 1_ high at Counter value = 5 and then low at Counter value = 2. Similarly we specify values for _pwm 2_. 4 Registers are needed to store these values (CCR1, CCR2, CCR3 & CCR4).
+
+Below are the timing signals which is required. As you can see we turn _pwm 1_ high at Counter value = 5 and then low at Counter value = 2. Similarly we specify values for _pwm 2_. Four Registers are needed to store these values (CCR1, CCR2, CCR3 & CCR4).
 
 ![time1](assets/waveform1.png)
 
