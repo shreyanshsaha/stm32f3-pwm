@@ -1,6 +1,6 @@
 # STM32F3 Phase shifted PWM signal
 
-For a project, we needed to generate two pwm signal with 55% duty cycle and a phase shift of 180 degrees.
+For our project, we needed to generate two pwm signal with 55% duty cycle and a phase shift of 180 degrees.
 
 We wanted a powerful microcontroller and hence we went with stm32. We also wanted to have hardware timer attached to the pins directly instead of using software to toggle pins.
 
